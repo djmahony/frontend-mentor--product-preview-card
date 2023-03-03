@@ -8,22 +8,38 @@
 
     <title>Frontend Mentor | Product preview card component</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stlesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <main>
+        <article class="card">
+            <section class="card_image">
+                <picture>
+                    <source media="(max-width: 599px)" srcset="./assets/images/image-product-mobile.jpg">
+                    <source media="(min-width: 600px)" srcset="./assets/images/image-product-desktop.jpg">
+                    <img src="image-product-mobile.jpg" alt="Main product image">
+                </picture>
+            </section>
+            <section class="card_content">
+                <header class="card_content__header">
+                    <div class="card_content__header__category">Preview</div>
 
-    Preview
+                    <h1 class="card_content__header__title">Gabrielle Essence Eau De Parfum</h1>
+                </header>
+                <section class="card_content__body">
+                    <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
 
-    Gabrielle Essence Eau De Parfum
-
-    A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-    Perfumer-Creator for the House of CHANEL.
-
-    $149.99
-    $169.99
-
-    Add to Cart
-
+                    <p class="card_content__price">$149.99 <span class="card_content__price--old">$169.99</span></p>
+                </section>
+                <footer class="card_content__footer">
+                    <a class="card_content__add_link"><button class="card_content__add_btn">Add to Cart</button></a>
+                </footer>
+            </section>
+        </article>
+    </main>
     <footer class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
     </footer>
